@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime</title>
+    <style>
+      body {
+        background-image: url("https://wallpapercave.com/wp/wp12350352.jpg");
+        /* background: radial-gradient(
+          circle at 10% 20%,
+          rgb(69, 86, 102) 0%,
+          rgb(34, 34, 34) 90%
+        ); */
+        background-size: cover;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      div.container {
+        width: 45%;
+        height: 600px;
+        margin: 30px 50px;
+        padding: 30px 30px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        color: white;
+        box-shadow: rgba(247, 243, 243, 0.56) 0px 22px 70px 4px;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+      }
+
+      button {
+        position: absolute;
+        top: 33px;
+        background-color: white;
+        border: 6px solid black;
+        padding: 10px 18px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      button:hover {
+        color: white;
+        background-color: black;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        position: relative;
+      }
+
+      .grid img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: all 200ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.09);
+      }
+
+      .container a {
+        display: block;
+        margin: 15px 0;
+        color: white;
+        font-size: 17px;
+
+        text-decoration: none;
+      }
+      .container a:hover {
+        transition: all 500ms ease-in-out;
+        text-decoration: underline;
+      }
+      .me {
+        color: white;
+        font-size: 16px;
+        margin: 8px 100px;
+        width: 300px;
+      }
+      /* --------------------------------------------- */
+      .light {
+        /* background: radial-gradient(
+          circle at 10% 20%,
+          rgba(216, 241, 230, 0.46) 0.1%,
+          rgba(233, 226, 226, 0.28) 90.1%
+        ); */
+        background-image: url("https://wallpapercave.com/wp/wp12851788.jpg");
+        color: black;
+      }
+
+      .light .container {
+        width: 45%;
+        height: 600px;
+        margin: 40px 50px;
+        padding: 30px 30px;
+        background-color: white;
+        border-radius: 20px;
+        color: black;
+        position: absolute;
+        right: 45px;
+      }
+
+      .light h1 {
+        color: black;
+      }
+
+      .light a {
+        color: black;
+      }
+
+      .light button {
+        position: absolute;
+        right: 100px;
+        top: -15px;
+        border: 6px solid white;
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+      .light button:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body class="light">
+    <div class="main">
+      <div class="container">
+        <button>ChangeTheme</button>
+
+        <h1>Welcome to the World of Anime</h1>
+        <p>
+          Welcome to the world of anime, a vibrant and diverse realm of
+          storytelling that spans genres and styles. From epic adventures and
+          heartwarming romances to psychological thrillers and fantastical
+          worlds, anime offers something for everyone. Each series brings unique
+          characters, intricate plots, and breathtaking artistry, drawing
+          viewers into imaginative and emotional experiences. Whether you're new
+          to anime or a longtime fan, this captivating medium promises endless
+          hours of entertainment and inspiration.
+        </p>
+
+        <div class="grid">
+          <img
+            src="https://i.ibb.co/4dmHB0c/attack-on-titan.webp"
+            alt="attack-on-titan"
+            border="0"
+          />
+          <img
+            src="https://i.ibb.co/qk0xyVR/Death-Note.webp"
+            alt="Death-Note"
+            border="0"
+          />
+          <img
+            src="https://i.ibb.co/HgVqR5m/kimyagar.webp"
+            alt="kimyagar"
+            border="0"
+          />
+          <img
+            src="https://i.ibb.co/7kMZfQ8/luffy.webp"
+            alt="luffy"
+            border="0"
+          />
+          <img
+            src="https://i.ibb.co/Q6sbqbM/myhero.jpg"
+            alt="myhero"
+            border="0"
+          />
+          <img
+            src="https://i.ibb.co/80KYMTn/tokyo-ghoul.jpg"
+            alt="tokyo-ghoul"
+            border="0"
+          />
+        </div>
+
+        <a href="https://9animetv.to/home" target="_blank"
+          >🔎 Find and watch your favorite anime here</a
+        >
+      </div>
+
+      <span class="me">👩‍💻Coded by Ghazala Sarabi</span>
+    </div>
+
+    <script>
+      function display() {
+        // let darkContainer = document.querySelector(".container");
+        // darkContainer.classList.toggle("light-container");
+
+        let body = document.querySelector("body");
+        body.classList.toggle("light");
+      }
+
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", display);
+    </script>
+  </body>
+</html>
